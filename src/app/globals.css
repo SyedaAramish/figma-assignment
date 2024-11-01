@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Root Variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -20,8 +21,96 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Utility for Balanced Text Wrapping */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Global Header Styles */
+.header {
+  background-color: white;  /* White background for the header */
+  color: black;             /* Black text color */
+  padding: 10px 20px;       /* Spacing for header */
+  display: flex;            /* Flexbox for layout */
+  justify-content: space-between;  /* Ensure "Cyber" on the left, search box on the right */
+  align-items: center;      /* Center vertically */
+  height: 60px;             /* Header height */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Shadow for header */
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 70px;
+}
+
+/* Search Box Styling */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  margin-right: 910px;/* Adds spacing between the search input and button */
+  color: #555;
+}
+
+/* Search Input Styling */
+.search-input {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #201919;
+  background-color: #f3eded;
+}
+
+/* Search Button Styling */
+.search-button {
+  background-color: #333; /* Dark button background */
+  color: white; /* White text */
+  padding: 8px 12px; /* Spacing inside the button */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Text size inside the button */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.search-button:hover {
+  background-color: #555; /* Lighter shade on hover */
+}
+
+
+/* styles/globals.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevents scroll bars if the image is larger */
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Positioning it over the image */
+  top: 73%; /* Center vertically */
+  left: 25%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+}
+
+.searchButton {
+  padding: 10px 20px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.searchButton:hover {
+  background-color: white;
+  color: black;
 }
